@@ -1,0 +1,13 @@
+# render.yaml - PortfolioWeb deployment
+services:
+  - type: static
+    name: beautiful-portfolio
+    env: node
+    branch: main           # branch to deploy from
+    rootDir: /             # project root
+    buildCommand: npm install && npm run build
+    publishPath: dist      # Vite outputs to 'dist' folder
+    plan: free             # Render free plan
+    envVars:               # optional environment variables
+      - key: NODE_ENV
+        value: production
