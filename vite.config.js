@@ -11,4 +11,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+   base: "/PortfolioWeb/", // <-- Add this line
 });
